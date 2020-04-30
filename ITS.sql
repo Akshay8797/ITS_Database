@@ -53,6 +53,16 @@ CREATE TABLE `its_tbl_user_credentials` (
   CONSTRAINT `its_tbl_user_credentials_chk_1` CHECK ((`Usertype` in ('A','T','H'))),
   CONSTRAINT `its_tbl_user_credentials_chk_2` CHECK ((`Loginstatus` in (0,1)))
 ) ;
+
+INSERT INTO `its_tbl_user_credentials` (`UserId`, `Password`, `Usertype`, `Loginstatus`)
+VALUES ('1001', 'akshay123', 'A', '1'),
+	   ('1002', 'yash123', 'T', '1'),
+	   ('1003', 'arko123', 'T', '1'),
+	   ('1004', 'hemant123', 'T', '1'),
+	   ('1005', 'anish123', 'H', '1'),
+	   ('1006', 'sibu123', 'H', '1'),
+	   ('1007', 'sandeep123', 'H', '1') ;
+
 CREATE TABLE `its_tbl_user_profile` (
   `CandidateId` varchar(6) NOT NULL,
   `Firstname` varchar(15) NOT NULL,
