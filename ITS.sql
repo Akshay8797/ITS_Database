@@ -1,4 +1,4 @@
-CREATE TABLE `its_tbl_candidtate` (
+CREATE TABLE `its_tbl_candidate` (
   `CandidateId` varchar(6) NOT NULL,
   `PrimarySkills` varchar(30) NOT NULL,
   `SecondarySkills` varchar(30) NOT NULL,
@@ -39,7 +39,7 @@ CREATE TABLE `its_tbl_interview_schedule` (
   KEY `CandidateID_idx` (`CandidateID`),
   KEY `TechID_idx` (`TechID`),
   KEY `empHRID_idx` (`empHRID`),
-  CONSTRAINT `CandidateID_is` FOREIGN KEY (`CandidateID`) REFERENCES `its_tbl_candidtate` (`CandidateId`) ,
+  CONSTRAINT `CandidateID_is` FOREIGN KEY (`CandidateID`) REFERENCES `its_tbl_candidate` (`CandidateId`) ,
   CONSTRAINT `empHRID` FOREIGN KEY (`empHRID`) REFERENCES `its_tbl_hrpanel` (`empHRId`) ,
   CONSTRAINT `TechID` FOREIGN KEY (`TechID`) REFERENCES `its_tbl_techpanel` (`techId`) 
 );
@@ -77,5 +77,5 @@ CREATE TABLE `its_tbl_user_profile` (
   `MobileNo` varchar(10) DEFAULT NULL,
   `EmailId` varchar(30) DEFAULT NULL,
   KEY `CandidateId_idx` (`CandidateId`),
-  CONSTRAINT `CandidateId` FOREIGN KEY (`CandidateId`) REFERENCES `its_tbl_candidtate` (`CandidateId`)
+  CONSTRAINT `CandidateId` FOREIGN KEY (`CandidateId`) REFERENCES `its_tbl_candidate` (`CandidateId`)
 ) ;
