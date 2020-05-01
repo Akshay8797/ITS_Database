@@ -1,4 +1,4 @@
-CREATE TABLE `its_tbl_candidtate` (
+CREATE TABLE `its_tbl_candidate` (
   `CandidateId` varchar(6) NOT NULL,
   `PrimarySkills` varchar(30) NOT NULL,
   `SecondarySkills` varchar(30) NOT NULL,
